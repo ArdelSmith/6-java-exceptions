@@ -16,9 +16,11 @@ public class Task07Main {
         try {
             processor.process(); //todo вы можете заменить реализацию этого метода для ручного дебага
         } catch (Exception e) {
-
+            if (e instanceof java.lang.RuntimeException) {
+                return "unchecked";
+            }
+            else return "checked";
         }
-        return null;
+        return "none";
     }
-
 }
